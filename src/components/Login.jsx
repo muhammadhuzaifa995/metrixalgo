@@ -14,7 +14,7 @@ const Login = () => {
 
   return (
     <>
-    <div className='flex justify-center bg-[#E5E7EB]'>
+    <div className='flex justify-center bg-[#E5E7EB] min-h-screen py-4'>
       <div className='bg-white w-full max-w-md rounded-2xl p-6 sm:p-10 shadow-lg'>
         <div className="flex justify-center mb-6">
           <img src="/src/assets/Graph-logo.png" alt="Graph-logo" className='h-12 sm:h-16' />
