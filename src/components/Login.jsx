@@ -80,7 +80,7 @@ const Login = () => {
             text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 
             ease-in-out hover:bg-indigo-700 hover:shadow-lg focus:bg-indigo-500 focus:shadow-lg 
             focus:outline-none focus:ring-0 active:bg-lightindigo-800 active:shadow-lg 
-            motion-reduce:transition-none dark:active:shadow-black'><a href="Dasboard">LOGIN</a></button>
+            motion-reduce:transition-none dark:active:shadow-black'><a href="Dashboard">LOGIN</a></button>
         </form>
       </div>
       </div>

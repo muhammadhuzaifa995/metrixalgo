@@ -1,4 +1,4 @@
-import { Calendar, Home, Inbox, LogOut, Search, Settings } from "lucide-react"
+import {  FolderMinus, LayoutDashboard, LogOut, MessageCircleMore, Settings, ShoppingBag, UsersRound } from "lucide-react"
 
 import {
   Sidebar,
@@ -19,24 +19,29 @@ import { cn } from "../lib/utils";
 // Menu items.
 const items = [
   {
+    title: "Dashboard",
+    url: "/Dashboard",
+    icon: LayoutDashboard,
+  },
+  {
     title: "Orders",
-    url: "#",
-    icon: Home,
+    url: "/Order",
+    icon: ShoppingBag,
   },
   {
     title: "Customers",
     url: "#",
-    icon: Inbox,
+    icon: UsersRound,
   },
   {
     title: "Inventory",
     url: "#",
-    icon: Calendar,
+    icon: FolderMinus,
   },
   {
     title: "Conversations",
     url: "#",
-    icon: Search,
+    icon: MessageCircleMore,
   },
   {
     title: "Settings",
@@ -47,7 +52,7 @@ const items = [
 
 export function AppSidebar() {
   const [isCollapsed, setIsCollapsed] = React.useState(false);
-  console.log("isCollapsed", isCollapsed);
+  // console.log("isCollapsed", isCollapsed);
   const isSm = useBreakpoint("sm");
   const checkCollapseCondition = !isSm && isCollapsed;
   return (
@@ -64,10 +69,10 @@ export function AppSidebar() {
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
-                    <a href={item.url}>
+                  <SidebarMenuButton asChild className="peer/menu-button flex items-center gap-2 overflow-hidden p-2 text-left outline-hidden ring-sidebar-ring focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 h-8 text-sm w-full justify-start px-3 py-2.5 rounded-lg transition-colors duration-200 ease-in-out text-gray-700 hover:bg-indigo-100 hover:text-indigo-600">
+                    <a href={item.url} className="py-5 hover:bg-[#5570F1] focus:bg-[#5570F1] active:bg-[#5570F1]">
                       <item.icon />
-                      <span>{item.title}</span>
+                      <span className="font-medium">{item.title}</span>
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>

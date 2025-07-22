@@ -180,7 +180,6 @@ const Dashboard = () => {
                         </clipPath>
                       </defs>
                     </svg>
-
                     <OnlyDropdown />
                   </div>
                   <div className="flex justify-between">
