@@ -1,10 +1,13 @@
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import Login from './components/Login'
-import Register from './components/Register'
-import Dashboard from './components/Dashboard'
-import Order from './components/Order'
 import Customers from './components/Customers'
+import Dashboard from './components/Dashboard'
+import Login from './components/Login'
+import Order from './components/Order'
+import Register from './components/Register'
+import Conversation from './components/conversation'
+import Settingpage from './components/setting-page'
+import Inventory from './components/inventory'
 function App() {
 
   return (
@@ -15,6 +18,11 @@ function App() {
         <Route path='/Dashboard' element={ <Dashboard /> } /> 
         <Route path='/Order' element={<Order />} />
         <Route path='/Customers' element={<Customers />} />
+        <Route path='/Conversation' element={<Conversation />} />
+        <Route path='/Setting' element={<Settingpage />} />
+        <Route path='/Inventory' element={<Inventory />} />
+
+
       </Routes>
     </>
   )

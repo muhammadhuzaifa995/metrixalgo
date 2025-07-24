@@ -9,7 +9,7 @@ const Customers = () => {
     <>
       <Layout>
         <div className="pt-20 p-6 ">
-          <div className="w-full md:flex justify-between mb-6 ">
+          <div className="w-full md:flex justify-between mb-6 items-center">
             <h1 className="font-medium text-xl">Customers Summary</h1>
             <a
               className="inline-flex items-center gap-2 bg-indigo-500 text-white px-5 py-2 rounded-full hover:bg-indigo-600 transition"

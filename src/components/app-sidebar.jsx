@@ -35,17 +35,17 @@ const items = [
   },
   {
     title: "Inventory",
-    url: "#",
+    url: "./Inventory",
     icon: FolderMinus,
   },
   {
     title: "Conversations",
-    url: "#",
+    url: "/Conversation",
     icon: MessageCircleMore,
   },
   {
     title: "Settings",
-    url: "#",
+    url: "/Setting",
     icon: Settings,
   },
 ]

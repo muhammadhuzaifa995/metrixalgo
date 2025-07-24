@@ -206,7 +206,7 @@ const Dashboard = () => {
                   <h2 className="text-lg font-semibold text-gray-700">Recent Orders</h2>
                 </div>
                 <div className="flex items-center justify-center p-8 flex-col text-center gap-3">
-                  <svg width="100" height="1o0" viewBox="0 0 141 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="100" height="100" viewBox="0 0 141 140" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="1" y="0.5" width="139" height="139" rx="69.5" fill="#F4F5FA" />
                     <rect x="1" y="0.5" width="139" height="139" rx="69.5" stroke="#E1E2E9" />
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M92.7832 80.7868L90.8609 65.3002C89.6899 59.7741 86.3757 57.5 83.2161 57.5H57.8293C54.6255 57.5 51.2009 59.6149 50.2066 65.3002L48.2623 80.7868C46.6714 92.1574 52.5265 95 60.1713 95H80.8962C88.5189 95 94.1972 90.8839 92.7832 80.7868ZM63.2425 70.3714C62.0222 70.3714 61.033 69.3533 61.033 68.0973C61.033 66.8414 62.0222 65.8232 63.2425 65.8232C64.4627 65.8232 65.452 66.8414 65.452 68.0973C65.452 69.3533 64.4627 70.3714 63.2425 70.3714ZM75.5051 68.0973C75.5051 69.3533 76.4943 70.3714 77.7145 70.3714C78.9348 70.3714 79.924 69.3533 79.924 68.0973C79.924 66.8414 78.9348 65.8232 77.7145 65.8232C76.4943 65.8232 75.5051 66.8414 75.5051 68.0973Z" fill="#BEC0CA" />
