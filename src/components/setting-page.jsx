@@ -35,11 +35,11 @@ export default function Component() {
         <div className="w-full">
           <div className="border-2 rounded-lg bg-white">
             {/* Tabs */}
-            <div className="border-b border-gray-200">
-              <div className="flex">
+            <div>
+              <div className="flex px-3 py-4">
                 <button
                   onClick={() => setActiveTab("account")}
-                  className={`flex-1 py-3 px-4 text-center font-medium text-sm border-b-2 ${
+                  className={`flex py-3 px-4 text-center font-medium text-sm border-b-2 ${
                     activeTab === "account"
                       ? "border-blue-500 text-blue-400"
                       : "border-transparent text-gray-500 hover:text-gray-700"
@@ -49,7 +49,7 @@ export default function Component() {
                 </button>
                 <button
                   onClick={() => setActiveTab("inquiry")}
-                  className={`flex-1 py-3 px-4 text-center font-medium text-sm border-b-2 ${
+                  className={`flex py-3 px-4 text-center font-medium text-sm border-b-2 ${
                     activeTab === "inquiry"
                       ? "border-blue-500 text-blue-400"
                       : "border-transparent text-gray-500 hover:text-gray-700"
@@ -59,7 +59,7 @@ export default function Component() {
                 </button>
                 <button
                   onClick={() => setActiveTab("security")}
-                  className={`flex-1 py-3 px-4 text-center font-medium text-sm border-b-2 ${
+                  className={`flex py-3 px-4 text-center font-medium text-sm border-b-2 ${
                     activeTab === "security"
                       ? "border-blue-500 text-blue-400"
                       : "border-transparent text-gray-500 hover:text-gray-700"
