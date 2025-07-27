@@ -3,9 +3,26 @@ import { CiMail } from "react-icons/ci";
 import { CiLock } from "react-icons/ci";
 import { FiEye, FiEyeOff} from "react-icons/fi";
 import { Link } from 'react-router-dom';
-
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate()
+  const [input, setInput] = useState({
+      email: "",
+      password: ""
+    });
+    const handleLogin = (e) => {
+      e.preventDefault();
+      const loggedUser = JSON.parse(localStorage.getItem("User"));
+      if (input.email === loggedUser.email && input.password === loggedUser.password){
+        localStorage.setItem("loggedin", true)
+        navigate("/Dashboard")
+      }else{
+        alert("Invalid Email or Password")
+      }
+
+
+    }
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePassword = () => {
@@ -21,11 +38,14 @@ const Login = () => {
         </div>
         <h1 className='text-2xl text-center font-semibold mb-2'>Welcome back!</h1>
         <p className="text-center text-sm text-gray-500 mb-8">Login to your account</p>
-        <form action="">
+        <form onSubmit={handleLogin}>
           <div className="flex justify-center flex-col mb-3">
             {/* Email Field */}
             <div className="relative mb-5 ">
               <input
+              name='email'
+                value={input.email}
+                onChange={ (e) => setInput({...input, [e.target.name] : e.target.value })}
                 className='peer w-full rounded bg-gray-100 px-12 pt-4 pb-2 text-black 
                   placeholder-transparent focus:outline-none focus:ring-2 focus:ring-indigo-500'
                 type="email" id="useremail" required placeholder="Enter Email"
@@ -40,6 +60,9 @@ const Login = () => {
             {/* Password Field */}
             <div className="relative mb-3">
               <input
+              name='password'
+                value={input.password}
+                onChange={ (e) => setInput({...input, [e.target.name] : e.target.value })}
                 className='peer w-full rounded bg-gray-100 px-12 pt-4 pb-2 text-black 
                   placeholder-transparent focus:outline-none focus:ring-2 focus:ring-indigo-500 pr-10'
                 type={showPassword ? "text" : "password"}
@@ -80,7 +103,7 @@ const Login = () => {
             text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 
             ease-in-out hover:bg-indigo-700 hover:shadow-lg focus:bg-indigo-500 focus:shadow-lg 
             focus:outline-none focus:ring-0 active:bg-lightindigo-800 active:shadow-lg 
-            motion-reduce:transition-none dark:active:shadow-black'><a href="Dashboard">LOGIN</a></button>
+            motion-reduce:transition-none dark:active:shadow-black'>LOGIN</button>
         </form>
       </div>
       </div>

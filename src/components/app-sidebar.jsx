@@ -15,6 +15,7 @@ import {
 import { useBreakpoint } from "../hooks/use-breakpoint";
 import React from "react";
 import { cn } from "../lib/utils";
+import { useNavigate } from "react-router-dom"
 
 // Menu items.
 const items = [
@@ -55,6 +56,12 @@ export function AppSidebar() {
   // console.log("isCollapsed", isCollapsed);
   const isSm = useBreakpoint("sm");
   const checkCollapseCondition = !isSm && isCollapsed;
+
+  const navigate = useNavigate();
+  const handleLogout= () =>{
+    localStorage.removeItem("loggedin")
+    navigate("/")
+  }
   return (
     <Sidebar collapsible="icon" onCollapseChange={setIsCollapsed}>
       <SidebarContent>
@@ -105,9 +112,12 @@ export function AppSidebar() {
                   <p className="mt-[6px] text-[#CC5F5F]">
                     <LogOut width="20" height="20"/>
                   </p>
-                  <p className="text-base font-normal font-urbanist text-[#CC5F5F]">
-                    Logout
-                  </p>
+                  <button
+                  onClick={handleLogout}
+                  type="submite"
+                  className="text-base font-normal font-urbanist text-[#CC5F5F]">
+                  Logout
+                  </button>
                 </div>
               )}
             </SidebarMenuButton>
