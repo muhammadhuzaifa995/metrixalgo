@@ -52,7 +52,7 @@ const Register = () => {
       <div className='flex justify-center bg-[#E5E7EB] min-h-screen py-4'>
         <div className='bg-white w-full max-w-md rounded-2xl p-6 sm:p-10 shadow-lg'>
           <div className="flex justify-center mb-6">
-            <img src="/src/assets/Graph-logo.png" alt="Graph-logo" className='h-12 sm:h-16' />
+            <img src="../src/assets/Graph-logo.png" alt="Graph-logo" className='h-12 sm:h-16' />
           </div>
           <h1 className="text-2xl text-center font-semibold mb-2">Get Started with
             <span className="text-indigo-500">Metrix</span></h1>
