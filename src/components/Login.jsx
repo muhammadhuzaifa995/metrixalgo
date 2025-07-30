@@ -44,7 +44,7 @@ const Login = () => {
       if (response.ok && data.user) {
         localStorage.setItem("user", JSON.stringify(data.user));
         localStorage.setItem("loggedin", true);
-        console.log("Login successful");
+        // console.log("Login successful");
         navigate("/Dashboard");
       } else {
         alert("Invalid Email or Password");

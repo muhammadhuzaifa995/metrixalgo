@@ -112,12 +112,12 @@ export function AppSidebar() {
                   <p className="mt-[6px] text-[#CC5F5F]">
                     <LogOut width="20" height="20"/>
                   </p>
-                  <button
+                  <p
                   onClick={handleLogout}
-                  type="submite"
+                  type="submit"
                   className="text-base font-normal font-urbanist text-[#CC5F5F]">
                   Logout
-                  </button>
+                  </p>
                 </div>
               )}
             </SidebarMenuButton>
