@@ -14,14 +14,10 @@ const Register = () => {
     email: "",
     password: ""
   });
-
-  
-
   // to store value in local storage
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // let item = {name, email, password}
     console.warn(input);
     const payload = {
       username: input.name,
