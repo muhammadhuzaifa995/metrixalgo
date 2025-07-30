@@ -5,42 +5,6 @@ import { FiEye, FiEyeOff } from "react-icons/fi";
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 
-// const Login = () => {
-//   const navigate = useNavigate()
-
-//   const [input, setInput] = useState({
-//       email: "",
-//       password: ""
-//     });
-//     const handleLogin =async (e) => {
-//       e.preventDefault();
-//       console.warn(input);
-//     const payload = {
-//       email: input.email,
-//       password: input.password
-//     }
-//     const baseUrl = import.meta.env.VITE_BASE_URL;
-//    let result = await fetch(`${baseUrl}/api/auth/login`,{
-//       method:'POST',
-//       body:JSON.stringify(payload),
-//       headers:{
-//         "Content-Type":"application/json",
-//         "Accept":"application/json"
-//       }
-//     })  
-//       const response = await result.json()
-//       console.warn("Result", response);
-//       const user = response.user;
-//       // const token = response.token;
-//       const loggedUser = JSON.parse (localStorage.getItem("user", (user)))
-//       // const loggedUser = JSON.parse(localStorage.getItem("user"));
-//       if (input.email === loggedUser.email && input.password === loggedUser.password){
-//         localStorage.setItem("loggedin", true)
-//         navigate("/Dashboard")
-//       }else{
-//         alert("Invalid Email or Password")
-//       }
-//     }
 const Login = () => {
   const navigate = useNavigate();
 
@@ -78,7 +42,6 @@ const Login = () => {
       if (response.ok && data.user) {
         localStorage.setItem("user", JSON.stringify(data.user));
         localStorage.setItem("loggedin", true);
-
         console.log("Login successful");
         navigate("/Dashboard");
       } else {
