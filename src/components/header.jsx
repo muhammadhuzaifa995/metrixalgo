@@ -8,15 +8,15 @@ function Header() {
   const location = useLocation();
   const path = location.pathname;
   const pageNames = {
-  "/Dashboard": "Dashboard",
-  "/Order": "Order",
-  "/Customers": "Customers",
-  "/Conversation": "Conversation",
-  "/Setting": "Setting",
-  "/Inventory": "Inventory",
+    "/Dashboard": "Dashboard",
+    "/Order": "Order",
+    "/Customers": "Customers",
+    "/Conversation": "Conversation",
+    "/Setting": "Setting",
+    "/Inventory": "Inventory",
 
-};
-const pageTitle = pageNames[path] || "Page";
+  };
+  const pageTitle = pageNames[path] || "Page";
 
 
   return (
