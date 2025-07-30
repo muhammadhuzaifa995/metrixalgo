@@ -85,7 +85,7 @@ const Inventory = () => {
                         </div>
                     </div>
                     <div className='bg-white p-4 rounded-xl shadow-md mt-4 min-h-screen'>
-                        
+
                     </div>
                 </div>
             </Layout>

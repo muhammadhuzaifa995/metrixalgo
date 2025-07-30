@@ -1,4 +1,4 @@
-import {  FolderMinus, LayoutDashboard, LogOut, MessageCircleMore, Settings, ShoppingBag, UsersRound } from "lucide-react"
+import { FolderMinus, LayoutDashboard, LogOut, MessageCircleMore, Settings, ShoppingBag, UsersRound } from "lucide-react"
 
 import {
   Sidebar,
@@ -58,7 +58,7 @@ export function AppSidebar() {
   const checkCollapseCondition = !isSm && isCollapsed;
 
   const navigate = useNavigate();
-  const handleLogout= () =>{
+  const handleLogout = () => {
     localStorage.removeItem("loggedin")
     navigate("/")
   }
@@ -88,7 +88,7 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-       <SidebarFooter className="mb-4">
+      <SidebarFooter className="mb-4">
         <SidebarMenu>
           <SidebarMenuItem
             className={cn("", checkCollapseCondition ? "" : " ")}
@@ -97,26 +97,26 @@ export function AppSidebar() {
               size={"logout"}
               className={cn("",
                 checkCollapseCondition
-                  // ? "!h-[80px]"
-                  // : " h-[60px] px-[10px] py-4 "
+                // ? "!h-[80px]"
+                // : " h-[60px] px-[10px] py-4 "
               )}
             >
               {checkCollapseCondition ? (
                 <div className="flex items-center gap-1 ">
                   <p className="mt-[6px]">
-                    <LogOut width="20" height="20"/>
+                    <LogOut width="20" height="20" />
                   </p>
                 </div>
               ) : (
                 <div className="flex items-center gap-1">
                   <p className="mt-[6px] text-[#CC5F5F]">
-                    <LogOut width="20" height="20"/>
+                    <LogOut width="20" height="20" />
                   </p>
                   <p
-                  onClick={handleLogout}
-                  type="submit"
-                  className="text-base font-normal font-urbanist text-[#CC5F5F]">
-                  Logout
+                    onClick={handleLogout}
+                    type="submit"
+                    className="text-base font-normal font-urbanist text-[#CC5F5F]">
+                    Logout
                   </p>
                 </div>
               )}
@@ -125,6 +125,6 @@ export function AppSidebar() {
         </SidebarMenu>
       </SidebarFooter>
     </Sidebar>
-   
+
   )
 }

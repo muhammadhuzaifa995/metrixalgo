@@ -13,12 +13,12 @@ const Login = () => {
     password: ""
   });
 
-//   useEffect(() => {
-//   const loggedIn = localStorage.getItem("loggedin");
-//   if (loggedIn) {
-//     navigate("/Dashboard");
-//   }
-// }, []);
+  //   useEffect(() => {
+  //   const loggedIn = localStorage.getItem("loggedin");
+  //   if (loggedIn) {
+  //     navigate("/Dashboard");
+  //   }
+  // }, []);
 
   const handleLogin = async (e) => {
     e.preventDefault();
