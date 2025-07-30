@@ -14,11 +14,35 @@ const Register = () => {
     email: "",
     password: ""
   });
+
+  
+
   // to store value in local storage
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    localStorage.setItem("User", JSON.stringify(input))
+    // let item = {name, email, password}
+    console.warn(input);
+    const payload = {
+      username: input.name,
+      email: input.email,
+      password: input.password
+    }
+    const baseUrl = import.meta.env.VITE_BASE_URL;
+   let result = await fetch(`${baseUrl}/api/auth/signup`,{
+      method:'POST',
+      body:JSON.stringify(payload),
+      headers:{
+        "Content-Type":"application/json",
+        "Accept":"application/json"
+      }
+    })  
+    const response = await result.json()
+    console.warn("Result", response);
+    const user = response.user;
+    const token = response.token;
+    localStorage.setItem("user", JSON.stringify(user))
+    localStorage.setItem("token", JSON.stringify(token))
     navigate("/")
   }
   const [showPassword, setShowPassword] = useState(false);
@@ -104,6 +128,13 @@ const Register = () => {
             </div>
           </div>
 
+          <button type='submit' className='w-30 inline-block rounded bg-indigo-500 px-6 pb-2 pt-2.5 
+            text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 
+            ease-in-out hover:bg-indigo-700 hover:shadow-lg focus:bg-indigo-500 focus:shadow-lg 
+            focus:outline-none focus:ring-0 active:bg-lightindigo-800 active:shadow-lg 
+            motion-reduce:transition-none dark:active:shadow-black'>SIGN UP</button>
+
+        </form>
           <div className='flex justify-end'>
             <span className='mb-7 text-xs text-right text-blue-600 
               hover:underline cursor-pointer'>Recover password</span>
@@ -114,13 +145,6 @@ const Register = () => {
               <Link to='/' className="text-blue-600 hover:underline mx-1">Login</Link>
             </p>
           </div>
-
-          <button type='submit' className='w-30 inline-block rounded bg-indigo-500 px-6 pb-2 pt-2.5 
-            text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 
-            ease-in-out hover:bg-indigo-700 hover:shadow-lg focus:bg-indigo-500 focus:shadow-lg 
-            focus:outline-none focus:ring-0 active:bg-lightindigo-800 active:shadow-lg 
-            motion-reduce:transition-none dark:active:shadow-black'>SIGN UP</button>
-        </form>
       </div>
       </div>
     </>

@@ -14,16 +14,16 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={ <Login /> } />
-        <Route path='/Register' element={ <Register /> } />
-        <Route path='/' element={ <ProtectedRoutes /> } >
-        <Route path='/Dashboard' element={ <Dashboard /> } /> 
-        <Route path='/Order' element={<Order />} />
-        <Route path='/Customers' element={<Customers />} />
-        <Route path='/Conversation' element={<Conversation />} />
-        <Route path='/Setting' element={<Settingpage />} />
-        <Route path='/Inventory' element={<Inventory />} />
-</Route>
+        <Route path='/' element={<Login />} />
+        <Route path='/Register' element={<Register />} />
+        <Route path='/' element={<ProtectedRoutes />} >
+          <Route path='/Dashboard' element={<Dashboard />} />
+          <Route path='/Order' element={<Order />} />
+          <Route path='/Customers' element={<Customers />} />
+          <Route path='/Conversation' element={<Conversation />} />
+          <Route path='/Setting' element={<Settingpage />} />
+          <Route path='/Inventory' element={<Inventory />} />
+        </Route>
 
       </Routes>
     </>
