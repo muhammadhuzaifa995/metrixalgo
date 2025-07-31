@@ -26,7 +26,7 @@ const Customers = () => {
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="lucide lucide-plus w-4 h-4"
+                className="lucide lucide-plus w-4 h-4"
                 aria-hidden="true"
               >
                 <path d="M5 12h14"></path>
@@ -221,7 +221,7 @@ const Customers = () => {
                   <button className="border border-gray-300 rounded px-2 py-1 text-sm">Bulk</button>
                 </div>
                 <div className="hidden sm:flex lg:hidden gap-2 w-full sm:w-auto">
-                     <input
+                  <input
                     type="search"
                     placeholder="Search"
                     className="border border-gray-300 rounded px-2 py-1 text-sm flex-1"
